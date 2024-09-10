@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <!--Home Fragment-->
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.apfinalproject.fragments.HomeFragment">
+
+        <!--Navigation to other fragments-->
+        <!--Home to OneEvent-->
+        <action
+            android:id="@+id/action_homeFragment_to_oneEventFragment"
+            app:destination="@id/oneEventFragment"/>
+
+        <!--Home to CreateEvent-->
+        <action
+            android:id="@+id/action_homeFragment_to_createEventFragment"
+            app:destination="@id/createEventFragment" />
+
+        <!--Home to ChatList-->
+        <action
+            android:id="@+id/action_homeFragment_to_chatListFragment"
+            app:destination="@id/chatListFragment" />
+
+        <!--Home to Profile-->
+        <action
+            android:id="@+id/action_homeFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+
+        <!--Home to Edit Profile-->
+        <action
+            android:id="@+id/action_homeFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+
+<!--        Home to New User-->
+        <action
+            android:id="@+id/action_homeFragment_to_createUserFragment"
+            app:destination="@id/createUserFragment" />
+
+        <!--Home to Event List-->
+        <action
+            android:id="@+id/action_homeFragment_to_eventListFragment"
+            app:destination="@id/eventListFragment" />
+
+        <!--Home to Map-->
+        <action
+            android:id="@+id/action_homeFragment_to_mapFragment"
+            app:destination="@id/mapFragment" />
+
+    </fragment>
+
+    <!--OneEvent Fragment-->
+    <fragment
+        android:id="@+id/oneEventFragment"
+        android:name="com.example.apfinalproject.fragments.OneEventFragment">
+
+        <!--OneEvent to Profile-->
+        <action
+            android:id="@+id/action_oneEventFragment_to_profileFragment"
+            app:destination="@id/profileFragment"/>
+
+        <!--OneEvent to editEvent-->
+        <action
+            android:id="@+id/action_oneEventFragment_to_editEventFragment"
+            app:destination="@id/editEventFragment"/>
+
+        <!--OneEvent to Chat-->
+        <action
+            android:id="@+id/action_oneEventFragment_to_chatFragment"
+            app:destination="@id/chatFragment"/>
+
+        <argument
+            android:name="Event"
+            app:argType="com.example.apfinalproject.model.Event" />
+
+    </fragment>
+
+    <!--New User Fragment-->
+    <fragment
+        android:id="@+id/createUserFragment"
+        android:name="com.example.apfinalproject.fragments.CreateUserFragment">
+
+        <!--Create User to Home-->
+        <action
+            android:id="@+id/action_createUserFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+            <argument
+                android:name="authUserId"
+                app:argType="string" />
+            <argument
+                android:name="authUserName"
+                app:argType="string" />
+            <argument
+                android:name="authUserEmail"
+                app:argType="string" />
+
+    </fragment>
+
+
+    <!--createEvent Fragment-->
+    <fragment
+        android:id="@+id/createEventFragment"
+        android:name="com.example.apfinalproject.fragments.CreateEventFragment">
+
+        <!--CreateEvent to OneEvent-->
+        <action
+            android:id="@+id/action_createEventFragment_to_oneEventFragment"
+            app:destination="@id/oneEventFragment" />
+
+    </fragment>
+
+
+
+    <!--Chat List Fragment-->
+    <fragment
+        android:id="@+id/chatListFragment"
+        android:name="com.example.apfinalproject.fragments.ChatListFragment" >
+
+        <!--ChatList to Chat-->
+        <action
+            android:id="@+id/action_chatListFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+
+        <!--ChatList to Home-->
+        <action
+            android:id="@+id/action_chatListFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+    </fragment>
+
+    <!--Chat Fragment-->
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.example.apfinalproject.fragments.ChatFragment">
+
+        <!--Chat to ChatList-->
+        <action
+            android:id="@+id/action_chatFragment_to_chatListFragment"
+            app:destination="@id/chatListFragment" />
+
+        <argument
+            android:name="Conversation"
+            app:argType="com.example.apfinalproject.model.Conversation"/>
+
+    </fragment>
+
+
+    <!--Map Fragment-->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.example.apfinalproject.fragments.MapFragment">
+
+            <!--Map to OneEvent-->
+        <action
+            android:id="@+id/action_mapFragment_to_oneEventFragment"
+            app:destination="@id/oneEventFragment" />
+
+    </fragment>
+
+    <!--Profile Fragment-->
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.example.apfinalproject.fragments.ProfileFragment" >
+
+        <!--Profile to EditProfile-->
+        <action
+            android:id="@+id/action_profileFragment_to_profileEditFragment"
+            app:destination="@id/profileEditFragment" />
+
+        <!--Profile to OneEvent-->
+        <action
+            android:id="@+id/action_profileFragment_to_oneEventFragment"
+            app:destination="@id/oneEventFragment" />
+
+        <!--Profile to Home-->
+        <action
+            android:id="@+id/action_profileFragment_to_homeFragment"
+            app:destination="@id/homeFragment" />
+
+        <argument
+            android:name="User"
+            app:argType="com.example.apfinalproject.model.User" />
+
+    </fragment>
+
+    <!--Profile Edit Fragment-->
+    <fragment
+        android:id="@+id/profileEditFragment"
+        android:name="com.example.apfinalproject.fragments.ProfileEditFragment" >
+
+        <!--EditProfile to Profile-->
+        <action
+            android:id="@+id/action_profileEditFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+
+    </fragment>
+
+    <!--EventList Fragment-->
+    <fragment
+        android:id="@+id/eventListFragment"
+        android:name="com.example.apfinalproject.fragments.EventListFragment">
+
+        <!--EventList to Event-->
+        <action
+            android:id="@+id/action_eventListFragment_to_oneEventFragment"
+            app:destination="@id/oneEventFragment" />
+
+    </fragment>
+
+    <!--Edit Event Fragment-->
+    <fragment
+        android:id="@+id/editEventFragment"
+        android:name="com.example.apfinalproject.fragments.EditEventFragment">
+
+        <action
+            android:id="@+id/action_editEventFragment_to_oneEventFragment"
+            app:destination="@id/oneEventFragment" />
+
+        <argument
+            android:name="Event"
+            app:argType="com.example.apfinalproject.model.Event" />
+
+    </fragment>
+
+</navigation>

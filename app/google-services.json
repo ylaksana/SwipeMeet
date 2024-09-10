@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "946096662958",
+    "project_id": "swipemeet-f9370",
+    "storage_bucket": "swipemeet-f9370.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:946096662958:android:d04319c99741d42102003f",
+        "android_client_info": {
+          "package_name": "com.example.apfinalproject"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBsC1IWSzq-UU8WlXkY402SxpgVoLCVvW0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

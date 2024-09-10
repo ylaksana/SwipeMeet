@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:layout_gravity="fill_horizontal">
+
+    <ImageView
+        android:id="@+id/profileButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="15dp"
+        android:src="@drawable/account"
+        android:contentDescription="profile" />
+
+    <ImageView
+        android:id="@+id/mapButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="15dp"
+        android:src="@drawable/map_search_outline" />
+
+    <ImageView
+        android:id="@+id/createButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="15dp"
+        android:src="@drawable/plus_box_outline" />
+
+    <ImageView
+        android:id="@+id/chatButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="15dp"
+        android:src="@drawable/chat_outline" />
+
+    <ImageView
+        android:id="@+id/eventListButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_weight="1"
+        android:layout_marginHorizontal="15dp"
+        android:src="@drawable/notebook_outline" />
+
+</LinearLayout>
